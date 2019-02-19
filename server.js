@@ -64,6 +64,15 @@ app.get('/about', (req, res) => {
 
 
 //we can specify as many routes as we want
+app.get('/portfolio', (req, res) => {
+  //render allows you to render any templates set up in view engine
+  res.render('portfolio.hbs', {
+    pageTitle: 'Portfolio Page'
+  });
+});
+
+
+//we can specify as many routes as we want
 app.get('/bad', (req, res) => {
   res.send({
     errorMessage: 'unable to handle request'
